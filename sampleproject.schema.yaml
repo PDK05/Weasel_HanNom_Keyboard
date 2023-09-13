@@ -180,7 +180,7 @@ speller:
 
 
 translator:                 #Tất cả những gì ở đây đều liên quan tới phần nhập liệu Telex hiển thị ra cho người dùng, khi gõ khanhs thì họ thấy khánh
-  dictionary: newhannom #File từ điển
+  dictionary: sampleproject #File từ điển
 #  prism: hannom            #Chưa thấy có tác dụng gì
   spelling_hints: 1         #Số lượng gợi ý được hiển thị
 #  enable_completion: false #Không cho phép tự hoàn thiện từ, thế nhưng chưa thấy có tác dụng gì sau khi sửa thành true
