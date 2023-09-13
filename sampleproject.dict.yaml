@@ -8,7 +8,7 @@ version: "0.1 | d13-m09-y2023"
 sort: by_weight                #Xếp từ theo độ phổ biến
 use_preset_vocabulary: false   #Bộ từ vựng định sẵn, đã thử chuyển qua true nhưng không có gì xảy ra, cân nhắc bỏ dòng này
 max_phrase_length: 7		   #Độ dài của cụm từ, 0 là không giới hạn
-min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại bỏ những từ có trọng số thấp nhất. Thay bằng số dương sẽ chỉ tìm từ có 
+min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại bỏ những từ có trọng số thấp nhất. Thay bằng số dương sẽ chỉ tìm từ có giá trị lớn hơn hoặc bằng
 ...
 
 
