@@ -68,7 +68,7 @@ style:
   comment_font_face: "Gothic Nguyen"    #Font phần - chữ chìm của phần gợi ý
   font_point: 13                        #Cỡ chữ phần chữ Hán lớn và phần chữ người dùng nhập
   label_font_point: 11                  #Cỡ số thứ tự của chữ Hán lớn trong bảng gợi ý
-  comment_font_point: 31                #Cỡ chữ chìm của phần gợi ý
+  comment_font_point: 11                #Cỡ chữ chìm của phần gợi ý
 
 
 speller:
