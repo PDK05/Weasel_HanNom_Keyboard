@@ -1,0 +1,290 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: sampleproject           #Tên file bộ gõ
+  name: Bộ gõ Hán Nôm(mẫu)           #Tên bộ gõ mà người dùng nhìn thấy
+  version: "0.1 | d13-m09-y2023"
+  author:
+    - 范維慶 <aqing20050@gmail.com>
+  description: |
+    Hán Nôm、Telex                   #Mô tả bộ gõ
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 越, 西 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 正字, 略字 ]
+    reset: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - r10n_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+
+simplifier:
+  tips: all
+  opencc_config: hn.json
+  option_name: simplification
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+style:
+  font_face: "Gothic Nguyen"            #Font phần chữ Hán lớn
+  label_font_face: "Gothic Nguyen"      #Font của - số thứ tự của chữ Hán trong bảng gợi ý
+  comment_font_face: "Gothic Nguyen"    #Font phần - chữ chìm của phần gợi ý
+  font_point: 13                        #Cỡ chữ Hán và phần chữ người dùng nhập
+  label_font_point: 11                  #Cỡ số thứ tự của chữ Hán lớn trong bảng gợi ý
+  comment_font_point: 31                #Cỡ chữ chìm của phần gợi ý
+
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyz
+  delimiter: " '" #Dấu phân cách có thể là kí tự khoảng trống hoặc '
+  algebra:
+    - xform/(ⓗ|ⓥ|×).+$// #Thêm ⓗ ⓥ và × vào cuối các từ, không có cái này thì từ điển sẽ không nhận
+
+    - xform/à/af/ #a
+    - xform/á/as/
+    - xform/ả/ar/
+    - xform/ã/ax/
+    - xform/ạ/aj/
+
+    - xform/ằ/ăf/ #ă
+    - xform/ắ/ăs/
+    - xform/ẳ/ăr/
+    - xform/ẵ/ăx/
+    - xform/ặ/ăj/
+    - xform/ă/aw/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/ầ/âf/ #â
+    - xform/ấ/âs/
+    - xform/ẩ/âr/
+    - xform/ẫ/âx/
+    - xform/ậ/âj/
+    - xform/â/aa/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/ì/if/ #i
+    - xform/í/is/
+    - xform/ỉ/ir/
+    - xform/ĩ/ix/
+    - xform/ị/ij/
+
+    - xform/ù/uf/ #u
+    - xform/ú/us/
+    - xform/ủ/ur/
+    - xform/ũ/ux/
+    - xform/ụ/uj/
+
+    - xform/ừ/ưf/ #ư
+    - xform/ứ/ưs/
+    - xform/ử/ưr/
+    - xform/ữ/ưx/
+    - xform/ự/ưj/
+    - xform/ư/uw/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/è/ef/ #e
+    - xform/é/es/
+    - xform/ẻ/er/
+    - xform/ẽ/ex/
+    - xform/ẹ/ej/
+
+    - xform/ề/êf/ #ê
+    - xform/ế/ês/
+    - xform/ể/êr/
+    - xform/ễ/êx/
+    - xform/ệ/êj/
+    - xform/ê/ee/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/ò/of/ #o
+    - xform/ó/os/
+    - xform/ỏ/or/
+    - xform/õ/ox/
+    - xform/ọ/oj/
+
+    - xform/ộ/ôj/ #ô
+    - xform/ỗ/ôx/
+    - xform/ổ/ôr/
+    - xform/ố/ôs/ 
+    - xform/ồ/ôf/
+    - xform/ô/oo/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/ờ/ơf/ #ơ
+    - xform/ớ/ơs/
+    - xform/ở/ơr/
+    - xform/ỡ/ơx/
+    - xform/ợ/ơj/
+    - xform/ơ/ow/ #Không có dấu thì phải viết cuối cùng
+
+    - xform/ỳ/yf/ #y
+    - xform/ý/ys/
+    - xform/ỷ/yr/
+    - xform/ỹ/yx/
+    - xform/ỵ/yj/
+
+    - xform/đ/dd/ #đ
+
+    - 'xform ([ae])([sfjxr])([ou]) $1$3$2'               #Không có dòng này, muốn gõ "áo" thì phải gõ mặc định theo dạng a-s-o
+    - 'xform (u|uw|i)([sfjxr])(a) $1$3$2'                #Tương tự 
+    - 'xform (aw|ow|uw)([sfjxr])(ng|nh|ch) $1$3$2'       #Cuối tổ hợp nào có phụ âm ghép luôn được viết trước
+    - 'xform (aw|ow|uw)([sfjxr])([iunptckmy]) $1$3$2'    #Cuối tổ hợp nào có phụ âm đơn thì phải viết sau
+    - 'xform ([aeiouâăôê])([sfjxr])(ng|nh|ch) $1$3$2'    #Tương tự
+    - 'xform ([aeiouâăôê])([sfjxr])([iunptckmy]) $1$3$2' #Tương tự
+    - 'xform (uy)([sfjxr])(nh|t) $1$3$2'                 #Tương tự
+
+    - xform/^(.*)$/$1z/    #Mọi từ đều có thể thêm z
+    - xform/([sfjxr])z/$1/ #Nếu đằng trước là sfjxr thì không nhận z nữa
+    - derive/^(qu|k|l|h|v|m|t|s?)i([sfjxrz])$/$1y$2/ #Kết thúc là y hay i đều như nhau
+    - derive/^(qu|k|l|h|v|m|t|s?)y([sfjxrz])$/$1i$2/ #Ngược lại
+
+    - abbrev/^([a-z]).+$/$1/  #Cho phép tìm kiếm chỉ bằng chữ cái đầu, 
+                              #nếu chỉ thêm dòng này, gõ đủ từ bao gồm cả dấu thì thanh tìm kiếm mới nhảy chữ
+
+    - derive/^(.*)[zsxjfra]$/$1/ #Dòng này quy định chữ cái cuối được phép là zsxjfr
+                                 #Khi không có dòng này chẳng hạn gõ "quốc anh" sẽ thấy rằng
+                                 #dấu sắc(s) của "quốc" không bị nhảy sang phụ âm đầu chữ mới nếu gõ thêm nguyên âm a
+                                 #thế nhưng nếu chỉ có dòng này, sẽ không thể tìm từ bằng chữ cái đầu
+
+
+translator:                 #Tất cả những gì ở đây đều liên quan tới phần nhập liệu Telex hiển thị ra cho người dùng, khi gõ khanhs thì họ thấy khánh
+  dictionary: newhannom #File từ điển
+#  prism: hannom            #Chưa thấy có tác dụng gì
+  spelling_hints: 1         #Số lượng gợi ý được hiển thị
+#  enable_completion: false #Không cho phép tự hoàn thiện từ, thế nhưng chưa thấy có tác dụng gì sau khi sửa thành true
+  preedit_format:
+    - xform/(ⓗ|ⓥ|×).+$// 
+    - 'xform (u|uw|i|w)(a)([sfjxr])$ $1$3$2'
+    - 'xform ([ae])([ou])([sfjxr]) $1$3$2'               #Không có dòng này khi gõ sẽ chỉ nhận dấu ở o và u trong khi chúng cần đặt dấu ở a và e
+    - 'xform (aw|ow|uw|w)(ng|nh|ch)([sfjxr]) $1$3$2'     #Không có cái này khi gõ cawngr sẽ chỉ nhận mũ không nhận dấu: căngr
+    - 'xform (aw|ow|uw|w)([iunptckmy])([sfjxr]) $1$3$2'  #Không có dòng này khi gõ những từ chứa ă ơ ư sẽ không nhận dấu trên các chữ đó
+    - 'xform ([aeiouâăôê])(ng|nh|ch)([sfjxr]) $1$3$2'    #Không có dòng này khi gõ khanhs sẽ không nhận
+    - 'xform ([aeiouâăôê])([iunptckmy])([sfjxr]) $1$3$2' #Không có dòng này khi gõ sẽ chỉ nhận dấu ở $2, là phần mà có iunptckmy
+    - 'xform (u)([sfjxr])(y) $1$3$2'                     #Không có dòng này khi gõ quys sẽ thành qúy
+    - 'xform (uy)(nh|t)([sfjxr]) $1$3$2'                 #Không có dòng này khi gõ quyts sẽ không nhận
+    - 'xform (gi)([sfjxr])(a) $1$3$2'                    #Không có dòng này khi gõ gias sẽ thành gía do không tách được gi và a
+    - 'xform qu([sfjxr])i qui$1'                         #Không có dòng này khi gõ quis sẽ thành qúi
+
+    - 'xform z '   #z sẽ thành space
+
+    - 'xform aa â' #â
+    - 'xform âf ầ' #Mọi thứ viết bình thường, riêng thứ tự mỗi phần hơi khác
+    - 'xform âs ấ' #Các chữ cái có mũ như â ă viết trước, a viết sau. Các chữ không có dấu không cần đẩy xuống cuối nữa. Viết tương tự với các chữ khác
+    - 'xform âr ẩ'
+    - 'xform âx ẫ'
+    - 'xform âj ậ'
+
+    - 'xform aw ă' #ă
+    - 'xform ăf ằ'
+    - 'xform ăs ắ'
+    - 'xform ăr ẳ'
+    - 'xform ăx ẵ'
+    - 'xform ăj ặ'
+
+    - 'xform af à' #a
+    - 'xform as á'
+    - 'xform ar ả'
+    - 'xform ax ã'
+    - 'xform aj ạ'
+
+    - 'xform if ì' #i
+    - 'xform is í'
+    - 'xform ir ỉ'
+    - 'xform ix ĩ'
+    - 'xform ij ị'
+
+    - 'xform uw ư' #ư
+    - 'xform ưf ừ'
+    - 'xform ưs ứ'
+    - 'xform ưr ử'
+    - 'xform ưx ữ'
+    - 'xform ưj ự'
+
+    - 'xform uf ù' #u
+    - 'xform us ú'
+    - 'xform ur ủ'
+    - 'xform ux ũ'
+    - 'xform uj ụ'
+
+    - 'xform ee ê' #ê
+    - 'xform êf ề'
+    - 'xform ês ế'
+    - 'xform êr ể'
+    - 'xform êx ễ'
+    - 'xform êj ệ'
+
+    - 'xform ef è' #e
+    - 'xform es é'
+    - 'xform er ẻ'
+    - 'xform ex ẽ'
+    - 'xform ej ẹ'
+
+    - 'xform ow ơ' #ơ
+    - 'xform ơf ờ'
+    - 'xform ơs ớ'
+    - 'xform ơr ở'
+    - 'xform ơx ỡ'
+    - 'xform ơj ợ'
+
+    - 'xform oo ô' #ô
+    - 'xform ôs ố'
+    - 'xform ôf ồ'
+    - 'xform ôj ộ'
+    - 'xform ôx ỗ'
+    - 'xform ôr ổ'
+
+    - 'xform of ò' #o
+    - 'xform os ó'
+    - 'xform or ỏ'
+    - 'xform ox õ'
+    - 'xform oj ọ'
+
+    - 'xform yf ỳ' #y
+    - 'xform ys ý'
+    - 'xform yr ỷ'
+    - 'xform yx ỹ'
+    - 'xform yj ỵ'
+
+    - 'xform dd đ' #đ
+
+
+  comment_format:                #Định dạng cho bảng gợi ý
+    - xform/^(.*)$/〔$1〕         #〔phần âm sẽ được kẹp trong này〕
+    - xform/((ⓗ|ⓥ|×).+)〕/〕$1/ #Các phần chứa ⓗⓥ× ở đầu sẽ được biểu diễn theo dạng "〕$1" tức để đảm bảo phần âm được nằm trong ngoặc và phần giải nghĩa nằm ngoài ngoặc
+    - xform/úy/uý/ #úy => uý
+    - xform/ùy/uỳ/ #Tương tự
+    - xform/ủy/uỷ/ #Tương tự
+    - xform/ụy/uỵ/ #Tương tự
+    - xform/ũy/uỹ/ #Tương tự
+    - xform/(qu|k|l|h|v|m|t|s)y/$1i/ #Các chữ trong tổ hợp bên khi chứa y thì đều đổi thành i
+    - xform/(qu|k|l|h|v|m|t|s)ỳ/$1ì/ #Tương tự
+    - xform/(qu|k|l|h|v|m|t|s)ý/$1í/ #Tương tự
+    - xform/(qu|k|l|h|v|m|t|s)ỷ/$1ỉ/ #Tương tự
+    - xform/(qu|k|l|h|v|m|t|s)ỹ/$1ĩ/ #Tương tự
+    - xform/(qu|k|l|h|v|m|t|s)ỵ/$1ị/ #Tương tự
