@@ -1,6 +1,7 @@
 # Rime schema
 # encoding: utf-8
 
+
 schema:
   schema_id: sampleproject           #Tên file bộ gõ
   name: Bộ gõ Hán Nôm(mẫu)           #Tên bộ gõ mà người dùng nhìn thấy
@@ -9,6 +10,7 @@ schema:
     - 范維慶 <aqing20050@gmail.com>
   description: |
     Hán Nôm、Telex                   #Mô tả bộ gõ
+
 
 switches:
   - name: ascii_mode
@@ -19,6 +21,7 @@ switches:
   - name: simplification
     states: [ 正字, 略字 ]
     reset: 0
+
 
 engine:
   processors:
@@ -50,11 +53,14 @@ simplifier:
   opencc_config: hn.json
   option_name: simplification
 
+
 punctuator:
   import_preset: default
 
+
 key_binder:
   import_preset: default
+
 
 style:
   font_face: "Gothic Nguyen"            #Font phần chữ Hán lớn
