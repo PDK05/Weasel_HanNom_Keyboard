@@ -66,7 +66,7 @@ style:
   font_face: "Gothic Nguyen"            #Font phần chữ Hán lớn
   label_font_face: "Gothic Nguyen"      #Font của - số thứ tự của chữ Hán trong bảng gợi ý
   comment_font_face: "Gothic Nguyen"    #Font phần - chữ chìm của phần gợi ý
-  font_point: 13                        #Cỡ chữ phần chữ Hán lớn và phần chữ người dùng nhập
+  font_point: 13                        #Cỡ chữ Hán và phần chữ người dùng nhập
   label_font_point: 11                  #Cỡ số thứ tự của chữ Hán lớn trong bảng gợi ý
   comment_font_point: 11                #Cỡ chữ chìm của phần gợi ý
 
@@ -157,23 +157,23 @@ speller:
 
     - xform/đ/dd/ #đ
 
-    - 'xform ([ae])([sfjxr])([ou]) $1$3$2'               #Không có dòng này, muốn gõ "áo" thì phải gõ mặc định theo dạng a-s-o
-    - 'xform (u|uw|i)([sfjxr])(a) $1$3$2'                #Tương tự 
-    - 'xform (aw|ow|uw)([sfjxr])(ng|nh|ch) $1$3$2'       #Cuối tổ hợp nào có phụ âm ghép luôn được viết trước
-    - 'xform (aw|ow|uw)([sfjxr])([iunptckmy]) $1$3$2'    #Cuối tổ hợp nào có phụ âm đơn thì phải viết sau
-    - 'xform ([aeiouâăôê])([sfjxr])(ng|nh|ch) $1$3$2'    #Tương tự
-    - 'xform ([aeiouâăôê])([sfjxr])([iunptckmy]) $1$3$2' #Tương tự
-    - 'xform (uy)([sfjxr])(nh|t) $1$3$2'                 #Tương tự
+    - 'xform ([ae])([fsrxj])([ou]) $1$3$2'               #Không có dòng này, muốn gõ "áo" thì phải gõ mặc định theo dạng a-s-o
+    - 'xform (u|uw|i)([fsrxj])(a) $1$3$2'                #Tương tự 
+    - 'xform (aw|ow|uw)([fsrxj])(ng|nh|ch) $1$3$2'       #Cuối tổ hợp nào có phụ âm ghép luôn được viết trước
+    - 'xform (aw|ow|uw)([fsrxj])([iunptckmy]) $1$3$2'    #Cuối tổ hợp nào có phụ âm đơn thì phải viết sau
+    - 'xform ([aeiouâăôê])([fsrxj])(ng|nh|ch) $1$3$2'    #Tương tự
+    - 'xform ([aeiouâăôê])([fsrxj])([iunptckmy]) $1$3$2' #Tương tự
+    - 'xform (uy)([fsrxj])(nh|t) $1$3$2'                 #Tương tự
 
     - xform/^(.*)$/$1z/    #Mọi từ đều có thể thêm z
-    - xform/([sfjxr])z/$1/ #Nếu đằng trước là sfjxr thì không nhận z nữa
-    - derive/^(qu|k|l|h|v|m|t|s?)i([sfjxrz])$/$1y$2/ #Kết thúc là y hay i đều như nhau
-    - derive/^(qu|k|l|h|v|m|t|s?)y([sfjxrz])$/$1i$2/ #Ngược lại
+    - xform/([fsrxj])z/$1/ #Nếu đằng trước là sfjxr thì không nhận z nữa
+    - derive/^(qu|k|l|h|v|m|t|s?)i([fsrxj])$/$1y$2/ #Kết thúc là y hay i đều như nhau
+    - derive/^(qu|k|l|h|v|m|t|s?)y([fsrxj])$/$1i$2/ #Ngược lại
 
     - abbrev/^([a-z]).+$/$1/  #Cho phép tìm kiếm chỉ bằng chữ cái đầu, 
                               #nếu chỉ thêm dòng này, gõ đủ từ bao gồm cả dấu thì thanh tìm kiếm mới nhảy chữ
 
-    - derive/^(.*)[zsxjfra]$/$1/ #Dòng này quy định chữ cái cuối được phép là zsxjfr
+    - derive/^(.*)[fsrxjz]$/$1/ #Dòng này quy định chữ cái cuối được phép là fsrxjz
                                  #Khi không có dòng này chẳng hạn gõ "quốc anh" sẽ thấy rằng
                                  #dấu sắc(s) của "quốc" không bị nhảy sang phụ âm đầu chữ mới nếu gõ thêm nguyên âm a
                                  #thế nhưng nếu chỉ có dòng này, sẽ không thể tìm từ bằng chữ cái đầu
@@ -186,16 +186,16 @@ translator:                 #Tất cả những gì ở đây đều liên quan 
 #  enable_completion: false #Không cho phép tự hoàn thiện từ, thế nhưng chưa thấy có tác dụng gì sau khi sửa thành true
   preedit_format:
     - xform/(ⓗ|ⓥ|×).+$// 
-    - 'xform (u|uw|i|w)(a)([sfjxr])$ $1$3$2'
-    - 'xform ([ae])([ou])([sfjxr]) $1$3$2'               #Không có dòng này khi gõ sẽ chỉ nhận dấu ở o và u trong khi chúng cần đặt dấu ở a và e
-    - 'xform (aw|ow|uw|w)(ng|nh|ch)([sfjxr]) $1$3$2'     #Không có cái này khi gõ cawngr sẽ chỉ nhận mũ không nhận dấu: căngr
-    - 'xform (aw|ow|uw|w)([iunptckmy])([sfjxr]) $1$3$2'  #Không có dòng này khi gõ những từ chứa ă ơ ư sẽ không nhận dấu trên các chữ đó
-    - 'xform ([aeiouâăôê])(ng|nh|ch)([sfjxr]) $1$3$2'    #Không có dòng này khi gõ khanhs sẽ không nhận
-    - 'xform ([aeiouâăôê])([iunptckmy])([sfjxr]) $1$3$2' #Không có dòng này khi gõ sẽ chỉ nhận dấu ở $2, là phần mà có iunptckmy
-    - 'xform (u)([sfjxr])(y) $1$3$2'                     #Không có dòng này khi gõ quys sẽ thành qúy
-    - 'xform (uy)(nh|t)([sfjxr]) $1$3$2'                 #Không có dòng này khi gõ quyts sẽ không nhận
-    - 'xform (gi)([sfjxr])(a) $1$3$2'                    #Không có dòng này khi gõ gias sẽ thành gía do không tách được gi và a
-    - 'xform qu([sfjxr])i qui$1'                         #Không có dòng này khi gõ quis sẽ thành qúi
+    - 'xform (u|uw|i|w)(a)([fsrxj])$ $1$3$2'
+    - 'xform ([ae])([ou])([fsrxj]) $1$3$2'               #Không có dòng này khi gõ sẽ chỉ nhận dấu ở o và u trong khi chúng cần đặt dấu ở a và e
+    - 'xform (aw|ow|uw|w)(ng|nh|ch)([fsrxj]) $1$3$2'     #Không có cái này khi gõ cawngr sẽ chỉ nhận mũ không nhận dấu: căngr
+    - 'xform (aw|ow|uw|w)([iunptckmy])([fsrxj]) $1$3$2'  #Không có dòng này khi gõ những từ chứa ă ơ ư sẽ không nhận dấu trên các chữ đó
+    - 'xform ([aeiouâăôê])(ng|nh|ch)([fsrxj]) $1$3$2'    #Không có dòng này khi gõ khanhs sẽ không nhận
+    - 'xform ([aeiouâăôê])([iunptckmy])([fsrxj]) $1$3$2' #Không có dòng này khi gõ sẽ chỉ nhận dấu ở $2, là phần mà có iunptckmy
+    - 'xform (u)([fsrxj])(y) $1$3$2'                     #Không có dòng này khi gõ quys sẽ thành qúy
+    - 'xform (uy)(nh|t)([fsrxj]) $1$3$2'                 #Không có dòng này khi gõ quyts sẽ không nhận
+    - 'xform (gi)([fsrxj])(a) $1$3$2'                    #Không có dòng này khi gõ gias sẽ thành gía do không tách được gi và a
+    - 'xform qu([fsrxj])i qui$1'                         #Không có dòng này khi gõ quis sẽ thành qúi
 
     - 'xform z '   #z sẽ thành space
 
