@@ -186,6 +186,7 @@ translator:                 #Tất cả những gì ở đây đều liên quan 
 #  enable_completion: false #Không cho phép tự hoàn thiện từ, thế nhưng chưa thấy có tác dụng gì sau khi sửa thành true
   preedit_format:
     - xform/(ⓗ|ⓥ|×).+$// 
+
     - 'xform (u|uw|i|w)(a)([fsrxj])$ $1$3$2'
     - 'xform ([ae])([ou])([fsrxj]) $1$3$2'               #Không có dòng này khi gõ sẽ chỉ nhận dấu ở o và u trong khi chúng cần đặt dấu ở a và e
     - 'xform (aw|ow|uw|w)(ng|nh|ch)([fsrxj]) $1$3$2'     #Không có cái này khi gõ cawngr sẽ chỉ nhận mũ không nhận dấu: căngr
