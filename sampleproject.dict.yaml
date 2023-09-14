@@ -12,8 +12,13 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 ...
 
 
-#Chú ý không viết comment ở bất kì đâu bắt đầu từ dòng 17
-#(Chữ Hán) + (Giải nghĩa) + (Độ phổ biến)
+#Kí tự khoảng cách riêng trong phần giải nghĩa:[ ]
+#ASCII: &#8197;
+#UNICODE: \u2005
+
+
+#Chú ý không viết comment ở bất kì đâu bắt đầu từ dòng 20
+#(Chữ Hán) Tab (Giải nghĩa) Tab (Độ phổ biến)
 ---
 𱐂	nguồiⓥ ⇔ 𱐂 nguội | 𱐂𱐂 nguồi nguội	4
 𩷉	giếcⓥ 𩵜𩷉 cá giếc	4
