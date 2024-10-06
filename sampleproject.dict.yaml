@@ -20,7 +20,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 #Chú ý không viết comment ở bất kì đâu bắt đầu từ dòng 20
 #(Chữ Hán) Tab (Giải nghĩa) Tab (Độ phổ biến)
 ---
-偀	anhⓥ 偀俺 anh em	0
+偀	anhⓥ 偀俺 anh em	0
 𱐂	nguồiⓥ ⇔ 𱐂 nguội | 𱐂𱐂 nguồi nguội	4
 𩷉	giếcⓥ 𩵜𩷉 cá giếc	4
 𩷉	diếcⓥ ⇔ 𩷉 giếc	4
@@ -28,7 +28,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 𫽦	nhuốmⓥ 𫽦𦭷 nhuốm màu, 𫽦病 nhuốm bệnh	4
 𤇲	nhuốmⓥ ⇔ 𤇲 nhóm | 𤇲焒 nhuốm lửa	4
 𬕳	trốcⓥ 𬕳𩠴 trốc gối, 咹𨑗𱖗𬕳 ăn trên ngồi trốc	4
-𰔺	trốcⓥ 茹𰔺𠃅 nhà trốc mái, 茹𰔺𠃅 cây trốc rễi	4
+𰔺	trốcⓥ 庌𰔺𠃅 nhà trốc mái, 庌𰔺𠃅 cây trốc rễ	4
 𱐂	nguộiⓥ 𱐂冷 nguội lạnh, 𩚵𱐂 cơm nguội, 𠏲𱐂 thợ nguội	303500
 𱐟	chuốtⓥ 𦃀𱐟 chải chuốt, 𢫵𱐟 trau chuốt	4
 𱠲	vácⓥ 扑𱠲 bốc vác ※𡨸翻音	218000
@@ -340,7 +340,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 扔	nhưngⓥ 扔𦓡 nhưng mà ※𡨸翻音	4800
 去	khứⓗ 過去 quá khứ, 𥿯去回 vé khứ hồi	158400
 去	khửⓗ 除去 trừ khử, 去蟲 khử trùng, 去菌 khử khuẩn	331300
-払	chàngⓥ 英払 anh chàng, 払𤳆 chàng trai	51500
+払	chàngⓥ 偀払 anh chàng, 払𤳆 chàng trai	51500
 甘	camⓗ 甘願 cam nguyện, 甘結 cam kết, 不甘 bất cam ※𡨸翻音	100600
 𠀗	khệnhⓥ 𠀗𠀖 khệnh khạng	4
 𠀖	khạngⓥ 𠀖𣡤 khạng nạng	4
@@ -588,7 +588,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 吋	xốnⓥ 吋唱 xốn xang, 吋眜 xốn mắt	4
 𠮾	ngộtⓥ 𠮾唏 ngột hơi, 𠮾𠿸 ngột ngạt	230700
 𣅅	nãyⓥ 班𣅅 ban nãy, 𣅶𣅅 lúc nãy, 欺𣅅 khi nãy	303500
-𠯅	nhắcⓥ 𠯅𢬨 nhắc nhở, 𠯅徠 nhắc lại, 𠯅𡀯𫇰𫜵之朱𢞂 nhắc chuyện cũ làm gì cho buồn	101700
+𠯅	nhắcⓥ 𠯅𢬨 nhắc nhở, 𠯅徠 nhắc lại, 𠯅𡀯𫇰𫜵咦朱𢞂 nhắc chuyện cũ làm gì cho buồn	101700
 曲	khúcⓗ 夜曲 dạ khúc, 歌曲 ca khúc, 曲折 khúc chiết ※𡨸翻音	143500
 同	đồngⓗ 共同 cộng đồng, 同胞 đồng bào ※𡨸翻音	7600
 吊	điếuⓗ 吊文 điếu văn	295200
@@ -3513,7 +3513,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 啐	thốiⓥ 洃啐 hôi thối, 啐他 thối tha	218000
 㖣	vòiⓥ 㖣永 vòi vĩnh ※𡨸翻音	211400
 唹	ờⓥ 唹𠰚 ờ nhỉ, 嚈唹 ỡm ờ	331300
-唹	ưⓥ 英尋碎固役唹？ Anh tìm tôi có việc ư?	145600
+唹	ưⓥ 偀尋碎固役唹？ Anh tìm tôi có việc ư?	145600
 唷	rúcⓥ 唷嚦 rúc rích ※𡨸翻音	303500
 唷	rungⓥ ⇔ 唷 rúc | 唷唷 rung rúc	181400
 啖	dèmⓥ 啖𢯠 dèm pha ※𡨸翻音	4
@@ -6021,7 +6021,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 嫗	âuⓗ 嫗姬 Âu Cơ	56200
 𡡅	oⓥ 婆𡡅 bà o	179900
 嫡	đíchⓗ 嫡派 đích phái, 嫡母 đích mẫu, 嫡名 đích danh	85400
-𡡦	đòiⓥ 碎𡡦 tôi đòi, 𡥵𡡦 con đòi	57300
+𡡦	đòiⓥ 𫇈𡡦 tôi đòi, 𡥵𡡦 con đòi	57300
 翠	thuýⓗ 翡翠 phỉ thuý, 翠翹 Thuý Kiều	214600
 𠼷	thayⓥ 𢝙𠼷 vui thay, 惵𠼷 đẹp thay	31900
 熊	hùngⓗ 熊虎 hùng hổ, 熊𡄆 hùng hục	83200
@@ -9062,20 +9062,20 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 盎詩	áng thơ	4
 嚶呃	anh ách	4
 映映	anh ánh	4
-英𧘇	anh ấy	7225
-英𪥘󠄁	anh cả	861
-英払	anh chàng	4
-英姉	anh chị	3292
-英姉㛪	anh chị em	4254
+偀𧘇	anh ấy	7225
+偀𪥘󠄁	anh cả	861
+偀払	anh chàng	4
+偀姉	anh chị	3292
+偀姉俺	anh chị em	4254
 櫻桃	anh đào	4
 英勇	anh dũng	1056
-英㛪	anh em	4
+偀俺	anh em	4
 英雄	anh hùng	4
 影響	ảnh hưởng	4
 英銳	anh nhuệ	4
 英國	anh quốc	1221
 映𤏬	ánh sáng	4
-英些	anh ta	21648
+偀咱	anh ta	21648
 罌粟	anh túc	4
 英文	anh văn	4
 映射	ánh xạ	4
@@ -35232,7 +35232,6 @@ o(╥﹏╥)o	khóc	1
 𡒪	ệch× 非標準或空通常	0
 𪪅	êm× 非標準或空通常	0
 腌	êm× 非標準或空通常	0
-俺	êm× 非標準或空通常	0
 偃	ễnh× 非標準或空通常	0
 𠼸	ện× 非標準或空通常	0
 偃	ễn× 非標準或空通常	0
@@ -35254,7 +35253,6 @@ o(╥﹏╥)o	khóc	1
 咿	è× 非標準或空通常	0
 腌	em× 非標準或空通常	0
 奄	em× 非標準或空通常	0
-俺	em× 非標準或空通常	0
 𠼸	ẻn× 非標準或空通常	0
 𥥐	ẻo× 非標準或空通常	0
 𣍩	eo× 非標準或空通常	0
@@ -48015,7 +48013,6 @@ o(╥﹏╥)o	khóc	1
 餍	yếm× 非標準或空通常	0
 饜	yếm× 非標準或空通常	0
 𧞣	yếm× 非標準或空通常	0
-俺	yêm× 非標準或空通常	0
 崦	yêm× 非標準或空通常	0
 恹	yêm× 非標準或空通常	0
 懕	yêm× 非標準或空通常	0
