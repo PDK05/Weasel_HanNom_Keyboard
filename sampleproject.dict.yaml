@@ -175,8 +175,8 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 亡	vongⓗ 滅亡 diệt vong, 亡命 vong mạng, 亡靈 vong linh	160200
 丫	aⓥ 丫鬟 a hoàn	4
 丫	nhaⓗ 丫鬟 nha hoàn	88000
-之	chiⓥ ⇔ 之 gì	41700
-之	gìⓥ 丐之 cái gì, 空固之 không có gì	14300
+𫩝	chiⓥ ⇔ 咦 gì	41700
+咦	gìⓥ 丐咦 cái gì, 空固咦 không có gì	14300
 己	kỉⓗ 益己 ích kỉ, 自己 tự kỉ, 知己 tri kỉ	74600
 已	dĩⓗ 已然 dĩ nhiên, 已往 dĩ vãng, 不得已 bất đắc dĩ	119000
 巳	tịⓗ 𣇞巳 giờ Tị, 乙巳 Ất Tị	148500
@@ -3388,7 +3388,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 眼	nhãnⓗ 眼球 nhãn cầu, 龍眼 long nhãn, 眼力 nhãn lực	211400
 眼	nhỡnⓥ ⇔ 眼 nhãn	460700
 眸	mâuⓗ 眸子 mâu tử	211400
-啩	quạiⓥ 𠹴啩 quằn quại, 注些𢶻𢬣𬨠定啩碎 chú ta vung tay lên định quại tôi	395800
+啩	quạiⓥ 𠹴啩 quằn quại, 注些𢶻𢬣𬨠定啩𫇈 chú ta vung tay lên định quại tôi	395800
 野	dãⓗ 野蠻 dã man, 荒野 hoang dã, 野心 dã tâm	136900
 啫	chơⓥ 啫噅 chơ vơ, 𢣻啫 lơ chơ ※𡨸翻音	272500
 㖫	lằngⓥ 㖫嚷 lằng nhằng	423500
@@ -4916,8 +4916,8 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 碑	biaⓥ 碑墓 bia mộ, 𢏑碑 bắn bia	133000
 𥓳	bểⓥ 丐鉢被𥓳耒 cái bát bị bể rồi	257200
 碎	toáiⓗ 煩碎 phiền toái	423500
-碎	tôiⓥ 衆碎 chúng tôi, 𤤰碎 vua tôi	3400
-碎	tuiⓥ ⇔ 碎 tôi	226300
+𫇈	tôiⓥ 衆𫇈 chúng tôi, 𤤰𫇈 vua tôi	3400
+𫇈	tuiⓥ ⇔ 𫇈 tôi	226300
 𥓷	canhⓥ 叫𥓷𥓷 kêu canh canh	137700
 豤	cấnⓥ 𤞼豤 lợn cấn	257200
 匯	hốiⓗ 匯兌 hối đoái	120700
@@ -45763,7 +45763,6 @@ o(╥﹏╥)o	khóc	1
 誶	tối× 非標準或空通常	0
 谇	tối× 非標準或空通常	0
 𥊴	tối× 非標準或空通常	0
-𫇈	tôi× 非標準或空通常	0
 𪝬	tôi× 非標準或空通常	0
 𤏣	tôi× 非標準或空通常	0
 晬	tôi× 非標準或空通常	0
