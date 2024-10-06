@@ -20,6 +20,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 #Chú ý không viết comment ở bất kì đâu bắt đầu từ dòng 20
 #(Chữ Hán) Tab (Giải nghĩa) Tab (Độ phổ biến)
 ---
+偀	anhⓥ 偀俺 anh em	0
 𱐂	nguồiⓥ ⇔ 𱐂 nguội | 𱐂𱐂 nguồi nguội	4
 𩷉	giếcⓥ 𩵜𩷉 cá giếc	4
 𩷉	diếcⓥ ⇔ 𩷉 giếc	4
@@ -1315,7 +1316,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 茂	mậuⓗ 茂才 mậu tài	145600
 苝	bấcⓥ 𣘃苝 cây bấc, 𥾘苝 sợi bấc, 珥如苝 nhẹ như bấc	423500
 苴	thơⓥ 𥘷苴 trẻ thơ, 𡥵苴 con thơ , 芹苴 Cần Thơ	103200
-英	anhⓥ 英㛪 anh em, 英𤳆 anh trai ⓗ 英雄 anh hùng, 㗂英 tiếng Anh	6800
+英	anhⓗ 英雄 anh hùng, 㗂英 tiếng Anh	6800
 𦬺	muốngⓥ 蔞𦬺 rau muống	4
 茌	sèⓥ 茌茌 sè sè, 𨐮茌 cay sè, 𭰪茌 sập sè	460700
 茌	sêⓥ 侺茌 sum sê	343200
@@ -1386,7 +1387,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 妻	xêⓥ 餅夫妻 bánh xu xê	395800
 到	đáoⓗ 獨到 độc đáo, 駕到 giá đáo, 周到 chu đáo	162300
 非	phiⓗ 非常 phi thường, 非法 phi pháp, 非凡 phi phàm	41800
-叔	thúcⓗ 英㛪叔伯 anh em thúc bá	84800
+叔	thúcⓗ 偀俺叔伯 anh em thúc bá	84800
 歧	kìⓗ 歧視 kì thị	9000
 肯	khẳngⓗ 肯定 khẳng định, 肯𠰋 khẳng khiu	119000
 肯	ngẳngⓥ 肯𠰋 ngẳng nghiu	4
@@ -3836,7 +3837,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 情	tìnhⓗ 情㤇 tình yêu, 情感 tình cảm, 情敵 tình địch	13400
 㥄	lẳngⓥ 㥄𢣻 lẳng lơ, 竉㥄 lủng lẳng, 㥄𠫾 lẳng đi	288100
 惜	tiếcⓥ 傷惜 thương tiếc, 當惜 đáng tiếc	135800
-愥	ảnhⓥ ⇔ 英𧘇 anh ấy	35100
+愥	ảnhⓥ ⇔ 偀𧘇 anh ấy	35100
 惏	lămⓥ 惏惏 lăm lăm, 惏𠻗 lăm le, 咖惏 cà lăm	211400
 惏	nhămⓥ ⇔ 惏 lăm	358200
 𢜞	lườiⓥ 𢜞怲 lười biếng	257200
