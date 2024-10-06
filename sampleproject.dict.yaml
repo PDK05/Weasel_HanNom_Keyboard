@@ -3899,7 +3899,8 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 𡞗	bóngⓥ 僮𡞗 đồng bóng	35300
 媎	chửaⓥ 固媎 có chửa	423500
 媌	miềuⓥ 美媌 mĩ miều	375000
-㛪	emⓥ 㛪𡛔 em gái, 㛪𤳆 em trai	14500
+俺	emⓥ 俺𤳆 em trai	14500
+㛪	emⓥ 㛪𡛔 em gái	14500
 婢	tìⓗ 婢女 tì nữ	460700
 婚	hônⓗ 結婚 kết hôn, 婚事 hôn sự, 婚夫 hôn phu	125400
 婉	uyểnⓗ 婉轉 uyển chuyển	319900
@@ -11375,7 +11376,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 終居	chung cư	1734
 證據	chứng cứ	4
 終動	chung đụng	4
-衆㛪	chúng em	883
+衆俺	chúng em	883
 烝𬋙	chưng hửng	4
 終結	chung kết	4
 證券	chứng khoán	4
@@ -11576,7 +11577,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 鼓吹	cổ suý	4
 旗帥	cờ suý	4
 𦙶𢬣	cổ tay	4
-𦙶𢬣㛪𡮣脯	cổ tay em bé bụ	4
+𦙶𢬣俺𡮣脯	cổ tay em bé bụ	4
 固胎	có thai	777
 固体	có thể	4
 固守	cố thủ	4
@@ -11660,7 +11661,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 𡥵蛦	con dơi	4
 𡥵搥	con dúi	4
 𡥵螠	con ếch	4
-𡥵㛪	con em	2120
+𡥵俺	con em	2120
 𡥵朠𫊬	con ễnh ương	4
 𡥵𡛔	con gái	4
 𡥵𤠰	con gấu	4
@@ -12279,7 +12280,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 𢠤󠄁鈍	đần độn	4
 民用	dân dụng	357
 彈藥	đạn dược	4
-僤㛪	đàn em	1211
+僤俺	đàn em	1211
 彈𫧂	đàn gáo	4
 民間	dân gian	3660
 民廊	dân làng	2244
@@ -22237,7 +22238,7 @@ min_phrase_weight: 0           #Trọng số tối thiểu, 0 là không loại 
 摨秩	trầy trật	4
 摨咮	trầy trụa	4
 𥘷𡥵於瀂	trẻ con ở lổ	4
-𥘷㛪	trẻ em	9798
+𥘷俺	trẻ em	9798
 𬓐𣇞	trễ giờ	4
 𡂙腜	trề môi	4
 𬓐㭁	trễ nải	4
